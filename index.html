@@ -1,0 +1,272 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>La Barra Negra</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Beer wall self-service móvil en Querétaro: pared de cerveza con 3 grifos para bodas, XV años, eventos corporativos y fiestas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"><style> /* Layout: a single black "wall" page; the hero IS the beer wall (LED-framed panel with 3 taps), sections stack like a menu board below it. */ :root{ --ink:#0d0c0a;        /* the wall */ --panel:#171512;      /* raised surfaces */ --line:#2c2821;       /* hairlines */ --gold:#c9a45c;       /* brass taps, LED */ --gold-soft:#8a6d2f; --cream:#efe6d3;      /* text */ --mute:#a79d8a;       /* secondary text */ --foam:#f6efe0; --amber:#d99a2b;      /* the beer */ --f-display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif; --f-body:"Archivo", "Helvetica Neue", Arial, sans-serif; --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace; color-scheme: dark; } *{box-sizing:border-box} html{scroll-behavior:smooth} @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}} body{background:var(--ink);color:var(--cream);font-family:var(--f-body);font-size:16px;line-height:1.6;margin:0} body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)} a{color:var(--gold)} :focus-visible{outline:2px solid var(--gold);outline-offset:3px} .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))} .eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)} h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.08;text-wrap:balance;margin:0} h2{font-size:clamp(2rem,4.5vw,3.2rem)} h3{font-size:1.45rem} p{margin:0} .lead{color:var(--mute);max-width:60ch} /* header */ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)} .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px} .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)} .brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--gold-soft)} .brand span{font-family:var(--f-display);font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase} .nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0} .nav ul a{color:var(--cream);text-decoration:none;font-size:.92rem} .nav ul a:hover{color:var(--gold)} .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 22px;font:600 .95rem var(--f-body);text-decoration:none;cursor:pointer;border:1px solid var(--gold);transition:background .2s,color .2s} .btn-gold{background:var(--gold);color:var(--ink)} .btn-gold:hover{background:var(--foam);border-color:var(--foam)} .btn-ghost{background:transparent;color:var(--gold)} .btn-ghost:hover{background:var(--gold);color:var(--ink)} @media (max-width:760px){.nav ul{display:none}.brand span{font-size:1rem}} /* hero */ .hero{padding-block:56px 72px} .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center} .hero h1{font-size:clamp(2.7rem,7vw,5.4rem);letter-spacing:-.01em} .hero h1 em{color:var(--gold);font-style:italic} .hero .lead{margin-top:20px;font-size:1.1rem} .hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px} .zone{margin-top:22px;font-family:var(--f-mono);font-size:.8rem;color:var(--mute)} @media (max-width:860px){.hero-grid{grid-template-columns:1fr}} /* the wall illustration */ .wall{position:relative;max-width:440px;width:100%;margin-inline:auto} .mampara{position:relative;background:linear-gradient(180deg,#141210,#0a0908);border-radius:6px;aspect-ratio:120/110;max-width:100%; box-shadow:0 0 0 2px var(--gold),0 0 22px 2px rgba(201,164,92,.45),inset 0 0 40px rgba(0,0,0,.8);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:7% 6% 0} .mampara img{width:30%;border-radius:50%;opacity:.95} .taps{display:grid;grid-template-columns:repeat(3,1fr);width:100%;align-items:end} .tap{display:flex;flex-direction:column;align-items:center;cursor:pointer;background:none;border:0;padding:0;color:inherit} .tap svg{width:42%;height:auto;transform-origin:50% 92%;transition:transform .35s ease} .tap:hover svg,.tap.on svg{transform:rotate(-14deg)} .tap-label{font-family:var(--f-mono);font-size:.68rem;color:var(--mute);margin-top:4px;letter-spacing:.06em;text-transform:uppercase} .base{background:#121110;border:1px solid var(--line);border-top:3px solid var(--gold-soft);height:110px;border-radius:0 0 6px 6px;display:grid;grid-template-columns:repeat(3,1fr);align-items:start;padding-top:10px} .glass{justify-self:center;width:34px;height:52px;border:2px solid rgba(239,230,211,.55);border-top:0;border-radius:0 0 6px 6px;position:relative;overflow:hidden} .glass i{position:absolute;inset:auto 0 0;height:0;background:linear-gradient(var(--foam) 0 9px,var(--amber) 9px);transition:height 1.4s ease} .tap.on~* .glass i{height:90%} .glass.full i{height:88%} .dims{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:.7rem;color:var(--mute);margin-top:10px} /* spec strip */ .specs{border-block:1px solid var(--line);background:var(--panel)} .specs .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0} .spec{padding-block:22px;padding-inline:16px;border-left:1px solid var(--line)} .spec:first-child{border-left:0} .spec b{display:block;font-family:var(--f-display);font-size:2rem;font-weight:500;color:var(--gold);font-variant-numeric:tabular-nums} .spec span{font-size:.88rem;color:var(--mute)} @media (max-width:760px){.specs .wrap{grid-template-columns:repeat(2,1fr)}.spec:nth-child(3){border-left:0}.spec{border-top:1px solid var(--line)}.spec:nth-child(-n+2){border-top:0}} section{padding-block:80px} .sec-head{display:grid;gap:14px;margin-bottom:40px;max-width:720px} /* steps */ .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s} .step{border-top:1px solid var(--gold-soft);padding-top:18px;display:grid;gap:8px} .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--f-mono);color:var(--gold);font-size:.85rem} .step p{color:var(--mute)} @media (max-width:760px){.steps{grid-template-columns:1fr}} /* packages */ .pk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px} .pk{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px 22px;display:flex;flex-direction:column;gap:14px;min-width:0} .pk.feat{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset} .pk .tag{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);min-height:1.2em} .pk .price{font-family:var(--f-display);font-size:2.1rem;font-variant-numeric:tabular-nums;line-height:1} .pk .price small{font-family:var(--f-body);font-size:.8rem;color:var(--mute);display:block;margin-top:6px} .pk ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:.92rem;color:var(--cream)} .pk li{padding-left:18px;position:relative} .pk li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:1px;background:var(--gold)} .pk .btn{margin-top:auto} .note{margin-top:18px;font-size:.82rem;color:var(--mute)} @media (max-width:980px){.pk-grid{grid-template-columns:repeat(2,1fr)}} @media (max-width:560px){.pk-grid{grid-template-columns:1fr}} /* tap list */ .board{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)} .beer{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:6px} .beer:nth-child(3n){border-right:0} .beer .maker{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)} .beer h3{font-size:1.3rem} .beer p{font-size:.9rem;color:var(--mute)} @media (max-width:760px){.board{grid-template-columns:1fr}.beer{border-right:0}} /* who */ .who{display:grid;grid-template-columns:repeat(3,1fr);gap:28px} .who article{display:grid;gap:10px;align-content:start} .who p{color:var(--mute)} @media (max-width:760px){.who{grid-template-columns:1fr}} /* calculator + form */ .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px} @media (max-width:860px){.calc-grid{grid-template-columns:1fr}} .card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:28px;display:grid;gap:18px;min-width:0} label{display:grid;gap:6px;font-size:.85rem;color:var(--mute)} input,select,textarea{font:500 1rem var(--f-body);color:var(--cream);background:var(--ink);border:1px solid var(--line);border-radius:3px;padding:11px 12px;width:100%} input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none} input[type=range]{padding:0;accent-color:var(--gold);background:transparent;border:0} .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px} @media (max-width:480px){.row2{grid-template-columns:1fr}} .out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px} .out div{border-top:1px solid var(--gold-soft);padding-top:10px} .out b{display:block;font-family:var(--f-display);font-size:1.9rem;font-weight:500;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.1} .out span{font-size:.78rem;color:var(--mute)} .msg{font-family:var(--f-mono);font-size:.82rem;white-space:pre-wrap;background:var(--ink);border:1px dashed var(--gold-soft);padding:14px;border-radius:3px;color:var(--cream)} .form-actions{display:flex;flex-wrap:wrap;gap:10px} .status{font-size:.85rem;color:var(--gold);min-height:1.3em} /* faq */ .faq{display:grid;gap:0;border-top:1px solid var(--line)} details{border-bottom:1px solid var(--line);padding-block:18px} summary{cursor:pointer;font-family:var(--f-display);font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;gap:16px} summary::after{content:"+";color:var(--gold);font-family:var(--f-mono)} details[open] summary::after{content:"–"} details p{margin-top:10px;color:var(--mute);max-width:70ch} footer{border-top:1px solid var(--line);padding-block:40px;background:var(--panel)} .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start} .foot p{color:var(--mute);font-size:.88rem} .legal{margin-top:24px;font-family:var(--f-mono);font-size:.72rem;color:var(--mute);letter-spacing:.06em;text-transform:uppercase} </style></head><body><header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><img src="logo.jpg" alt="Logo La Barra Negra"><span>La Barra Negra</span></a>
+    <ul>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#paquetes">Paquetes</a></li>
+      <li><a href="#cervezas">Cervezas</a></li>
+      <li><a href="#cotiza">Cotiza</a></li>
+    </ul>
+    <a class="btn btn-gold" href="#cotiza">Aparta tu fecha</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Beer wall self-service · Querétaro</p>
+        <h1>Tu pared,<br>tu cheve,<br><em>a tu ritmo.</em></h1>
+        <p class="lead">Llevamos una pared negra con luz LED y tres grifos a tu evento. Tus invitados se sirven cerveza de barril bien fría, sin filas y sin esperar al bartender.</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="#cotiza">Cotiza tu evento</a>
+          <a class="btn btn-ghost" href="#paquetes">Ver paquetes</a>
+        </div>
+        <p class="zone">Santiago de Querétaro · El Marqués · Corregidora</p>
+      </div>
+      <div class="wall" aria-label="Ilustración de la pared con tres grifos">
+        <div class="mampara">
+          <img src="logo.jpg" alt="">
+          <div class="taps" id="taps">
+            <button class="tap" type="button" aria-label="Servir Clara"><svg viewBox="0 0 40 110" aria-hidden="true"><path d="M14 4h12l3 46H11z" fill="#c9a45c"/><path d="M14 4h4l-1 46h-6z" fill="#e7cf98"/><rect x="12" y="50" width="16" height="8" rx="2" fill="#8a6d2f"/><circle cx="20" cy="70" r="11" fill="none" stroke="#c9a45c" stroke-width="3"/><circle cx="20" cy="70" r="4" fill="#c9a45c"/><rect x="16" y="78" width="8" height="24" rx="2" fill="#c9a45c"/></svg><span class="tap-label">Clara</span></button><button class="tap" type="button" aria-label="Servir Oscura"><svg viewBox="0 0 40 110" aria-hidden="true"><path d="M14 4h12l3 46H11z" fill="#c9a45c"/><path d="M14 4h4l-1 46h-6z" fill="#e7cf98"/><rect x="12" y="50" width="16" height="8" rx="2" fill="#8a6d2f"/><circle cx="20" cy="70" r="11" fill="none" stroke="#c9a45c" stroke-width="3"/><circle cx="20" cy="70" r="4" fill="#c9a45c"/><rect x="16" y="78" width="8" height="24" rx="2" fill="#c9a45c"/></svg><span class="tap-label">Oscura</span></button><button class="tap" type="button" aria-label="Servir Artesanal"><svg viewBox="0 0 40 110" aria-hidden="true"><path d="M14 4h12l3 46H11z" fill="#c9a45c"/><path d="M14 4h4l-1 46h-6z" fill="#e7cf98"/><rect x="12" y="50" width="16" height="8" rx="2" fill="#8a6d2f"/><circle cx="20" cy="70" r="11" fill="none" stroke="#c9a45c" stroke-width="3"/><circle cx="20" cy="70" r="4" fill="#c9a45c"/><rect x="16" y="78" width="8" height="24" rx="2" fill="#c9a45c"/></svg><span class="tap-label">Artesanal</span></button>
+          </div>
+        </div>
+        <div class="base">
+          <span class="glass" data-g="0"><i></i></span>
+          <span class="glass" data-g="1"><i></i></span>
+          <span class="glass" data-g="2"><i></i></span>
+        </div>
+        <div class="dims"><span>120 cm de frente</span><span>200 cm de alto</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="specs">
+    <div class="wrap">
+      <div class="spec"><b>3</b><span>grifos con estilos distintos</span></div>
+      <div class="spec"><b>2–4 °C</b><span>cerveza al servirse</span></div>
+      <div class="spec"><b>1.2 m</b><span>de frente: cabe en terraza o jardín</span></div>
+      <div class="spec"><b>≈79</b><span>vasos de 355 ml por barril de 30 L</span></div>
+    </div>
+  </div>
+
+  <section id="como">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Cómo funciona</p>
+        <h2>Tú pones la fiesta. Nosotros, la pared.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Montamos</h3><p>Llegamos una hora antes, conectamos barriles, enfriador y CO₂, y dejamos la pared encendida y lista.</p></div>
+        <div class="step"><h3>Te sirves</h3><p>Cada invitado jala su grifo y se sirve a su ritmo. Un anfitrión de La Barra Negra cambia barriles y cuida que todo esté frío y limpio.</p></div>
+        <div class="step"><h3>Desmontamos</h3><p>Al terminar recogemos todo. Si contrataste por consumo, te entregamos el reporte de litros servidos por grifo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paquetes" style="background:var(--panel);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Paquetes</p>
+        <h2>Precio cerrado, sin sorpresas.</h2>
+        <p class="lead">Todos incluyen pared con LED, 3 grifos, enfriamiento, CO₂, anfitrión, montaje y desmontaje.</p>
+      </div>
+      <div class="pk-grid">
+        <article class="pk">
+          <p class="tag">Trae tu cerveza</p>
+          <h3>Solo Pared</h3>
+          <p class="price">$4,500<small>+ IVA · hasta 5 h</small></p>
+          <ul><li>Tú compras los barriles; te decimos cuántos y dónde</li><li>1 anfitrión</li><li>Vasos incluidos</li></ul>
+          <a class="btn btn-ghost" href="#cotiza" data-pk="Solo Pared">Cotizar</a>
+        </article>
+        <article class="pk">
+          <p class="tag">Fiestas</p>
+          <h3>Clásico 50</h3>
+          <p class="price">$9,900<small>+ IVA · 50 invitados · 5 h</small></p>
+          <ul><li>3 barriles de cerveza comercial</li><li>Vasos y anfitrión</li><li>Corona, Victoria, Modelo, Tecate o Indio</li></ul>
+          <a class="btn btn-ghost" href="#cotiza" data-pk="Clásico 50">Cotizar</a>
+        </article>
+        <article class="pk feat">
+          <p class="tag">Bodas y XV</p>
+          <h3>Premium 100</h3>
+          <p class="price">$19,900<small>+ IVA · 100 invitados · 5 h</small></p>
+          <ul><li>2 estilos comerciales + 1 artesanal de Querétaro</li><li>Grifos con los nombres de los novios</li><li>2 anfitriones</li></ul>
+          <a class="btn btn-gold" href="#cotiza" data-pk="Premium 100">Cotizar</a>
+        </article>
+        <article class="pk">
+          <p class="tag">Empresas</p>
+          <h3>Corporativo 150</h3>
+          <p class="price">$26,900<small>+ IVA · 150 personas · 4 h</small></p>
+          <ul><li>Logo de tu empresa en la pared</li><li>Opción sin alcohol</li><li>Factura</li></ul>
+          <a class="btn btn-ghost" href="#cotiza" data-pk="Corporativo 150">Cotizar</a>
+        </article>
+      </div>
+      <p class="note">Precios de referencia 2026 en zona metropolitana de Querétaro. Fuera de zona se cotiza el traslado. Cerveza sujeta a disponibilidad del distribuidor.</p>
+    </div>
+  </section>
+
+  <section id="cervezas">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">En los grifos</p>
+        <h2>Tres grifos. Tú eliges la mezcla.</h2>
+        <p class="lead">Combina una clara de siempre con una oscura o una artesanal hecha en Querétaro.</p>
+      </div>
+      <div class="board">
+        <div class="beer"><p class="maker">Grupo Modelo</p><h3>Corona · Victoria</h3><p>Las claras que todos piden. Barril de 30 L.</p></div>
+        <div class="beer"><p class="maker">Grupo Modelo</p><h3>Modelo Especial · Negra</h3><p>Para quien quiere más cuerpo.</p></div>
+        <div class="beer"><p class="maker">Heineken México</p><h3>Tecate · Indio</h3><p>Ligera y de malta oscura. Barril de 30 L.</p></div>
+        <div class="beer"><p class="maker">Heineken México</p><h3>Heineken · XX</h3><p>Para un evento más premium.</p></div>
+        <div class="beer"><p class="maker">Hecha en Querétaro</p><h3>Artesanal local</h3><p>Lager, IPA o stout de cervecería queretana. Barril de 20 L.</p></div>
+        <div class="beer"><p class="maker">Para todos</p><h3>Sin alcohol</h3><p>Opción para conductores y eventos de día.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="para-quien" style="background:var(--panel);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Para quién</p><h2>Cabe en tu jardín, tu terraza o tu planta.</h2></div>
+      <div class="who">
+        <article><h3>Bodas y XV años</h3><p>Un punto de reunión que se vuelve foto obligada. Personalizamos los grifos y la pared con los colores del evento.</p></article>
+        <article><h3>Empresas</h3><p>Posadas, family days y cierres de año en parques industriales y oficinas. Precio por persona, factura y control de consumo.</p></article>
+        <article><h3>Fiestas en casa</h3><p>Cumpleaños, carne asada o partido de Gallos. La pared llega, se conecta y tú te olvidas de la hielera.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cotiza">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Calcula y cotiza</p>
+        <h2>¿Cuánta cerveza necesitas?</h2>
+        <p class="lead">Calculamos 1.5 L por invitado en un evento de 5 horas. Ajusta y mándanos tu solicitud por WhatsApp.</p>
+      </div>
+      <div class="calc-grid">
+        <div class="card">
+          <label for="inv">Invitados: <strong id="invOut" style="color:var(--cream)">80</strong>
+            <input type="range" id="inv" min="20" max="300" step="5" value="80">
+          </label>
+          <label for="lpp">Litros por invitado
+            <select id="lpp">
+              <option value="1">1.0 L · evento de día o corporativo</option>
+              <option value="1.5" selected>1.5 L · fiesta de 5 horas</option>
+              <option value="2">2.0 L · fiesta larga y cervecera</option>
+            </select>
+          </label>
+          <div class="out">
+            <div><b id="oL">120</b><span>litros</span></div>
+            <div><b id="oB">4</b><span>barriles de 30 L</span></div>
+            <div><b id="oV">338</b><span>vasos de 355 ml</span></div>
+          </div>
+          <p class="note" style="margin:0">Cálculo aproximado. Confirmamos la cantidad final al cotizar.</p>
+        </div>
+        <form class="card" id="f" novalidate>
+          <div class="row2">
+            <label for="nom">Nombre<input id="nom" required autocomplete="name" placeholder="Ana López"></label>
+            <label for="fecha">Fecha del evento<input id="fecha" type="date" required></label>
+          </div>
+          <div class="row2">
+            <label for="tipo">Tipo de evento
+              <select id="tipo"><option>Boda</option><option>XV años</option><option>Empresa</option><option>Cumpleaños / fiesta</option><option>Otro</option></select>
+            </label>
+            <label for="zona">Municipio
+              <select id="zona"><option>Santiago de Querétaro</option><option>El Marqués</option><option>Corregidora</option><option>Otro (cotizar traslado)</option></select>
+            </label>
+          </div>
+          <label for="paq">Paquete
+            <select id="paq"><option>Aún no sé</option><option>Solo Pared</option><option>Clásico 50</option><option>Premium 100</option><option>Corporativo 150</option></select>
+          </label>
+          <p class="msg" id="msg" aria-live="polite"></p>
+          <div class="form-actions">
+            <a class="btn btn-gold" id="wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+            <button class="btn btn-ghost" type="button" id="copy">Copiar mensaje</button>
+          </div>
+          <p class="status" id="st"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Preguntas frecuentes</p><h2>Lo que nos preguntan antes de apartar.</h2></div>
+      <div class="faq">
+        <details><summary>¿Necesito conexión eléctrica?</summary><p>Lo ideal es un contacto de 110 V a menos de 15 m. Si tu jardín no tiene luz, llevamos el sistema de enfriamiento con hielo.</p></details>
+        <details><summary>¿Quién compra la cerveza?</summary><p>Puedes elegir. En los paquetes Clásico, Premium y Corporativo la cerveza va incluida. En Solo Pared tú compras los barriles y nosotros te decimos cuántos necesitas y dónde conseguirlos.</p></details>
+        <details><summary>¿Cuánto espacio ocupa la pared?</summary><p>1.20 m de frente por 65 cm de fondo, más un área para formar una fila corta. Cabe en terrazas, jardines, patios y bodegas.</p></details>
+        <details><summary>¿Cómo aparto la fecha?</summary><p>Con 50% de anticipo. El resto se liquida un día antes del evento. Puedes pagar por transferencia o con tarjeta.</p></details>
+        <details><summary>¿Y si se acaba la cerveza?</summary><p>El anfitrión te avisa cuando queda el último barril para que decidas si agregamos uno más.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#inicio"><img src="logo.jpg" alt=""><span>La Barra Negra</span></a>
+      <div><p>Querétaro, México · Est. 2026</p><p>Instagram y Facebook: @labarranegra.qro</p><p>WhatsApp: <span id="waTxt">por definir</span></p></div>
+    </div>
+    <p class="legal">Evite el exceso · Prohibida la venta a menores de edad · Servicio solo para mayores de 18 años</p>
+  </div>
+</footer>
+
+<script>
+/* Pon aquí el número de WhatsApp del negocio, con 52 y sin espacios. Ej: "524421234567" */
+const WA_NUMBER = "";
+const $ = s => document.querySelector(s);
+
+// taps: tap one to pour its glass
+document.querySelectorAll('.tap').forEach((t,i)=>{
+  t.addEventListener('click',()=>{
+    const g = document.querySelector('.glass[data-g="'+i+'"]');
+    const on = t.classList.toggle('on');
+    g.classList.toggle('full', on);
+  });
+});
+// first frame shows one poured glass
+document.querySelector('.glass[data-g="1"]').classList.add('full');
+document.querySelectorAll('.tap')[1].classList.add('on');
+
+function calc(){
+  const n = +$('#inv').value, l = +$('#lpp').value;
+  const lit = n*l;
+  $('#invOut').textContent = n;
+  $('#oL').textContent = Math.round(lit).toLocaleString('es-MX');
+  $('#oB').textContent = Math.ceil(lit/30);
+  $('#oV').textContent = Math.round(lit*0.94/0.355).toLocaleString('es-MX');
+  build();
+}
+function build(){
+  const fecha = $('#fecha').value ? new Date($('#fecha').value+'T12:00').toLocaleDateString('es-MX',{day:'numeric',month:'long',year:'numeric'}) : '(por definir)';
+  const m = `Hola, La Barra Negra. Quiero cotizar la pared de cerveza.
+Nombre: ${$('#nom').value || '(tu nombre)'}
+Fecha: ${fecha}
+Evento: ${$('#tipo').value}
+Municipio: ${$('#zona').value}
+Invitados: ${$('#inv').value}
+Paquete: ${$('#paq').value}`;
+  $('#msg').textContent = m;
+  const wa = $('#wa');
+  if (WA_NUMBER){ wa.href = 'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(m); wa.removeAttribute('aria-disabled'); }
+  else { wa.href = '#cotiza'; wa.setAttribute('aria-disabled','true'); }
+}
+['#inv','#lpp'].forEach(s=>$(s).addEventListener('input',calc));
+['#nom','#fecha','#tipo','#zona','#paq'].forEach(s=>$(s).addEventListener('input',build));
+document.querySelectorAll('[data-pk]').forEach(a=>a.addEventListener('click',()=>{ $('#paq').value = a.dataset.pk; build(); }));
+$('#wa').addEventListener('click',e=>{ if(!WA_NUMBER){ e.preventDefault(); $('#st').textContent='El número de WhatsApp aún no está configurado. Copia el mensaje mientras tanto.'; }});
+$('#copy').addEventListener('click',()=>{
+  const t = $('#msg').textContent;
+  const done = ()=>{$('#st').textContent='Mensaje copiado. Pégalo en WhatsApp.';};
+  try{ navigator.clipboard.writeText(t).then(done).catch(sel); }catch(e){ sel(); }
+  function sel(){ const r=document.createRange(); r.selectNodeContents($('#msg')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $('#st').textContent='Texto seleccionado: cópialo con Ctrl/Cmd + C.'; }
+});
+$('#f').addEventListener('submit',e=>e.preventDefault());
+if (WA_NUMBER) $('#waTxt').textContent = '+'+WA_NUMBER;
+calc();
+</script></body></html>
