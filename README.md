@@ -4,7 +4,9 @@ Sitio web de La Barra Negra, beer wall self-service móvil en Querétaro.
 
 - `index.html`: sitio completo (HTML, CSS y JS en un solo archivo, sin build).
 - `logo.jpg`: logo.
-- `img/`: piezas para redes sociales.
+- `img/`: primeras piezas para redes sociales.
+- `social/`: kit de lanzamiento para redes (39 imágenes) y `social/ESTRATEGIA.md` con la estrategia por red.
+- `og.jpg`: imagen de vista previa al compartir el link.
 
 ## Configuración
 
